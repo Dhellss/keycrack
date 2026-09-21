@@ -4,7 +4,7 @@ Every lock holds a key of four different symbols. Guess, read the feedback, cut 
 
 ## Play
 
-Open `index.html` in a browser. No build step, no dependencies.
+https://dhellss.github.io/keycrack/
 
 ## Rules
 
