@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>keycrack</title>
+<meta name="description" content="Work out the four-symbol key from the feedback before the attempts run out.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">~/ dhellskiee : <span>./keycrack</span></div>
+  <div class="brand dim" id="v-lock">lock 1</div>
+</header>
+
+<main class="app">
+  <div class="hud">
+    <div class="stat"><span class="k">attempts left</span><span class="v" id="v-left">8</span></div>
+    <div class="stat"><span class="k">score</span><span class="v" id="v-score">0</span></div>
+    <div class="stat"><span class="k">best</span><span class="v" id="v-best">0</span></div>
+  </div>
+
+  <div class="panel">
+    <div class="log" id="log"></div>
+    <div class="current" id="current" aria-label="your guess"></div>
+    <div class="pad" id="pad"></div>
+    <div class="acts">
+      <button class="ghost" id="back" type="button">delete</button>
+      <button class="btn" id="submit" type="button" disabled>Try key</button>
+    </div>
+  </div>
+
+  <p class="legend"><b class="pip exact"></b> right symbol, right slot &nbsp; <b class="pip near"></b> right symbol, wrong slot</p>
+  <p class="hint">type the symbols on your keyboard · backspace to delete · enter to try</p>
+
+  <div class="overlay" id="overlay">
+    <div class="card" id="card">
+      <h1>keycrack</h1>
+      <p>Every lock holds a key of four different symbols. Guess, read the feedback, cut down what is left.</p>
+      <ul class="rules">
+        <li>Feedback is unordered — it tells you how many, never which.</li>
+        <li>Eight attempts per lock. Crack it and the next lock adds a symbol.</li>
+        <li>Fewer attempts used, more points.</li>
+      </ul>
+      <button class="btn" id="go" type="button">Start</button>
+    </div>
+  </div>
+</main>
+<footer class="foot">dhellmar mahilum — malupet na hacker</footer>
+<script src="script.js"></script>
+</body>
+</html>
